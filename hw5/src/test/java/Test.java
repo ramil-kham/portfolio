@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class Test {
     public static void main(String[] args) {
+
         MethodsOfCollection methodsOfCollection = new MethodsOfCollection();
         List<String> list = new ArrayList<>();
         list.add("111");
@@ -19,4 +20,5 @@ public class Test {
         map2.put("111", "222");
         System.out.println(methodsOfCollection.inverse(map2));
     }
+
 }

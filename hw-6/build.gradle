@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.8.0-M1'
+}
+
+test {
+    useJUnitPlatform {
+        includeTags("addition")
+        failFast = true
+    }
+
+    tasks.withType(Test) {
+        testLogging {
+            exceptionFormat "full"
+            events "started", "skipped", "passed", "failed"
+            showStandardStreams true
+        }
+    }
+//    tasks.register("testAddition", Test) {
+//        useJUnitPlatform {
+//            includeTags "addition"
+//        }
+//    }
+}
