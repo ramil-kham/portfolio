@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/../hw8" />
+            <option value="$PROJECT_DIR$/../hw8/untitled" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -21,6 +22,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/hw-6" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/hw-8" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-7.1.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/hw-8" />
           </set>
         </option>
       </GradleProjectSettings>

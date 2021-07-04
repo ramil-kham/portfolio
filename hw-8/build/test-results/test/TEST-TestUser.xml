@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestUser" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-04T13:27:27" hostname="LAPTOP-D0LCGE5F" time="0.046">
+  <properties/>
+  <testcase name="name()" classname="TestUser" time="0.046"/>
+  <system-out><![CDATA[2021-07-04T16:27:27.335116300
+User{name='User$FullName@2a421348', birthDay=Sun Jul 04 00:00:00 MSK 2021, registrationDate=2021-07-04T16:27:27.316267100, login='6pq6l1', password='hhiq8Unkyo'}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
