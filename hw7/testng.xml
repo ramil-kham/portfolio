@@ -1,0 +1,8 @@
+<suite name="Suite1">
+<!--    <parameter name="paramName" value="paramValue"/>-->
+    <test name="TestCalculatorTestNG" >
+        <classes>
+            <class name="TestCalculatorTestNG" />
+        </classes>
+    </test>
+</suite>
