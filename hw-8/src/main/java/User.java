@@ -1,39 +1,67 @@
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.math3.random.RandomDataGenerator;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Random;
 
 public class User {
-    private FullName name;
-    private Date birthDay;
-    private LocalDateTime registrationDate;
+    private String fullName;
+    private String birthDay;
+    private String registrationDate;
     private String login;
     private String password;
 
-    public User(FullName name, LocalDateTime registrationDate, String login, String password) {
+    public User(String fullName, String birthDay, String registrationDate, String login, String password) {
 
-        this.name = name;
-        this.birthDay = new Date();
+        this.fullName = fullName;
+        this.birthDay = birthDay;
         this.registrationDate = registrationDate;
         this.login = login;
         this.password = password;
     }
 
+    public User()  {
+        this.fullName = generateRandomName();
+        this.birthDay = generateRandomDate();
+        this.registrationDate = generateRandomRegistrationDate();
+        this.login = generateRandomLogin(6);
+        this.password = generateRandomPassword(10);
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getBirthDay() {
+        return birthDay;
+    }
+
+    public String getRegistrationDate() {
+        return registrationDate;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", birthDay=" + birthDay +
-                ", registrationDate=" + registrationDate +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+        return "User{" + fullName + ", birthday: " + birthDay + ", registration date: " + registrationDate +
+                ", login: " + login + ", password: " + password;
     }
-    public class FullName {
-        private String firstName;
-        private String lastName;
+
+    public static class FullName {
+        private static String firstName;
+        private static String lastName;
+        private static String middleName;
 
         public String getFirstName() {
             return firstName;
@@ -59,37 +87,43 @@ public class User {
             this.middleName = middleName;
         }
 
-        private String middleName;
+        public FullName() {
+            this.firstName = generatedRandomFirstName();
+            this.lastName = generatedRandomLastName();
+            this.middleName = generatedRandomMiddleName();
+        }
+        public static String generatedRandomLastName() {
+            String[] lastname = {"Ivanov", "Petrov", "Makarov", "Andreev", "Sidorov"};
+            return lastname[new Random().nextInt(lastname.length)];
+        }
+        public static String generatedRandomFirstName() {
+            String[] firstname = {"Ivan", "Alexandr", "Sergey", "Andrey", "Maxim"};
+            return firstname[new Random().nextInt(firstname.length)];
+        }
+        public static String generatedRandomMiddleName() {
+            String[] middlename = {"Ivanovich", "Petrovich", "Makarovich", "Andreevich", "Vladimirovich"};
+            return middlename[new Random().nextInt(middlename.length)];
+        }
 
-        public FullName(String lastName, String firstName, String middleName) {
-            this.firstName = firstName = "";
-            this.lastName = lastName = "";
-            this.middleName = middleName = "";
+        @Override
+        public String toString() {
+            return lastName + " " + firstName + " " + middleName;
+        }
+        public String getFIO() {
+            return lastName + " " + firstName.charAt(0) + "." + middleName.charAt(0) + ".";
         }
     }
+    private String generateRandomName() {
+        return FullName.generatedRandomLastName() + " " + FullName.generatedRandomFirstName() + "." + FullName.generatedRandomMiddleName();
+    }
 
-
-    private Date generateRandomDate()  {
+    private String generateRandomDate()  {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = new Date();
-        try {
-            return sdf.parse(sdf.format(date));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return  new Date();
+        RandomDataGenerator dataGenerator = new RandomDataGenerator();
+        return sdf.format(new Date(dataGenerator.nextLong(1000, new Date().getTime())));
     }
-    private FullName generateRandomName() {
-        String firstName = "";
-        String lastName = "";
-        String middleName = "";
-        return  new FullName(lastName, firstName, middleName);
-    }
-    private String generateRandomName(FullName fullName) {
-        return fullName.getLastName() + " " + fullName.getFirstName() + "." + fullName.getMiddleName();
-    }
-    private LocalDateTime generateRandomRegistrationDate() {
-        return LocalDateTime.now();
+    private String generateRandomRegistrationDate() {
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
     }
     private String generateRandomLogin(int count) {
         return generateRandomAlphaNumeric(count);
@@ -101,12 +135,5 @@ public class User {
 
     private String generateRandomPassword(int count) {
         return generateRandomAlphaNumeric(count);
-    }
-    public User()  {
-        this.name = generateRandomName();
-        this.birthDay = generateRandomDate();
-        this.registrationDate = generateRandomRegistrationDate();
-        this.login = generateRandomLogin(6);
-        this.password = generateRandomPassword(10);
     }
 }
