@@ -132,6 +132,7 @@ public class User implements Serializable {
         public String toString() {
             return "Address: " + city + ", " + street + ", " + house + ", " + numberOfFlat;
         }
+
         public static String getCity() {
             return city;
         }
@@ -156,6 +157,7 @@ public class User implements Serializable {
         public static void setNumberOfFlat(int numberOfFlat) {
             Address.numberOfFlat = numberOfFlat;
         }
+
         public static String generatedRandomCity() {
             String[] city = {"Kazan", "Ufa", "Moscow", "Chelyabinsk", "Vladivostok"};
             return city[new Random().nextInt(city.length)];

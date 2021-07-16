@@ -1,27 +1,26 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.text.ParseException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class TestHelper {
-    User user = new User();
-    User userIncorrect = new User("Pavel457", "1987-10-10", "2021-07-5T15:05:10", "Pavel", "pasha");
-/*
-    @Test
-    public void passwordTest() {
-        Assertions.assertTrue(TestUser.userPassword(userIncorrect.getPassword()));
+
+    public static boolean userPassword(final User user)  {
+      return user.getPassword().matches("(?=^.{6,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$");
+   }
+
+   public static boolean userLogin(final User user) {
+      return user.getLogin().matches("^[a-zA-Z]{4,6}+$");
+   }
+   public static boolean userFullName(final User user) {
+       return user.getFullName().matches("^([A-Z]|[A-Z][\\x27a-z]{1,}|[A-Z][\\x27a-z]{1,}\\-([A-Z][\\x27a-z]{1,}|))\\040[A-Z][\\x27a-z]{1,}(\\040[A-Z][\\x27a-z]{1,})?$");
+   }
+   public static boolean userBirthDay(final User user) {
+      return user.getBirthDay().matches("(19|20)\\d\\d-((0[1-9]|1[012])-(0[1-9]|[12]\\d)|(0[13-9]|1[012])-30|(0[13578]|1[02])-31)");
     }
 
-    @Test
-    public void loginTest() {
-        Assertions.assertTrue(TestUser.userLogin(userIncorrect.getLogin()));
-    }
-
-    @Test
-    public void fullNameTest() {
-        Assertions.assertTrue(TestUser.userPassword(userIncorrect.getFullName()));
-    }
-
-    @Test
-    public void birthdayTest() {
-        Assertions.assertTrue(TestUser.userPassword(userIncorrect.getBirthDay()));
-    }*/
 }

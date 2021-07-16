@@ -35,6 +35,34 @@ public class UserTests {
 */
 
     }
+    @Test
+    public void method() throws IOException, ClassNotFoundException {
+        List<User> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            User user = new User();
+            list.add(user);
+        }
+        FileOutputStream fos = new FileOutputStream("C:\\Users\\Airis\\IdeaProjects\\portfolio\\hw-9\\target\\users.txt");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(list);
+
+        FileInputStream fis = new FileInputStream("C:\\Users\\Airis\\IdeaProjects\\portfolio\\hw-9\\target\\users.txt");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        List list1 = (List) ois.readObject();
+        ois.close();
+        System.out.println(list1);
+    }
+    @Test
+    public void method1() {
+        List<User.Address> listAddress = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            User.Address userAddress = new User.Address();
+            listAddress.add(userAddress);
+        }
+        System.out.println(listAddress);
+    }
+
+
     User user = new User();
 
 

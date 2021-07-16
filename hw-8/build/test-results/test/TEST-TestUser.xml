@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestUser" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-10T15:45:07" hostname="LAPTOP-D0LCGE5F" time="0.027">
-  <properties/>
-  <testcase name="name()" classname="TestUser" time="0.027"/>
-  <system-out><![CDATA[User{Pavelov Pavel Pavelovich, birthday: 1972-12-05, registration date: 2021-07-10T18:45:07, login: CUiIld, password: x3OWHiJBnd
-User{34, birthday: 23, registration date: 12, login: 44, password: 56
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

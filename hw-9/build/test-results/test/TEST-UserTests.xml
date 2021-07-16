@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UserTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-11T10:06:06" hostname="LAPTOP-D0LCGE5F" time="0.019">
+<testsuite name="UserTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-11T14:18:09" hostname="LAPTOP-D0LCGE5F" time="0.015">
   <properties/>
-  <testcase name="deserialization()" classname="UserTests" time="0.019"/>
-  <system-out><![CDATA[User{Petrov Maxim.Vladimirovich, birthday: 1978-12-08, registration date: 2021-07-11T13:05:54, login: iCFkrh, password: 1gi3VWFswf, address: city: Vladivostok, street: Pushkina, house: 10, number of flat: 37
+  <testcase name="method1()" classname="UserTests" time="0.015"/>
+  <system-out><![CDATA[[Address: null, null, null, 0, Address: null, null, null, 0, Address: null, null, null, 0, Address: null, null, null, 0, Address: null, null, null, 0, Address: null, null, null, 0, Address: null, null, null, 0, Address: null, null, null, 0, Address: null, null, null, 0, Address: null, null, null, 0]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

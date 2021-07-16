@@ -29,7 +29,7 @@ public class User {
         this.birthDay = generateRandomDate();
         this.registrationDate = generateRandomRegistrationDate();
         this.login = generateRandomLogin(6);
-        this.password = generateRandomPassword(10);
+        this.password = generateRandomPassword(6);
     }
 
     public String getFullName() {
@@ -114,7 +114,7 @@ public class User {
         }
     }
     private String generateRandomName() {
-        return FullName.generatedRandomLastName() + " " + FullName.generatedRandomFirstName() + "." + FullName.generatedRandomMiddleName();
+        return FullName.generatedRandomLastName() + " " + FullName.generatedRandomFirstName() + " " + FullName.generatedRandomMiddleName();
     }
 
     private String generateRandomDate()  {
@@ -126,14 +126,12 @@ public class User {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
     }
     private String generateRandomLogin(int count) {
-        return generateRandomAlphaNumeric(count);
-    }
-
-    private String generateRandomAlphaNumeric(int count) {
-        return RandomStringUtils.randomAlphanumeric(count);
+        return RandomStringUtils.randomAlphabetic(count);
     }
 
     private String generateRandomPassword(int count) {
-        return generateRandomAlphaNumeric(count);
+        String[] randomSymbol = {"!","@","#","&","(",")","–","[","{","}","]",":",";","'",",","?","/","*","~","$","^","+",
+            "=","<",">"};
+        return RandomStringUtils.randomAlphanumeric(count) + randomSymbol[new Random().nextInt(randomSymbol.length)];
     }
 }
