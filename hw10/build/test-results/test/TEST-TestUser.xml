@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestUser" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-18T00:00:28" hostname="LAPTOP-D0LCGE5F" time="0.138">
+  <properties/>
+  <testcase name="TestWithXStream()" classname="TestUser" time="0.138"/>
+  <system-out><![CDATA[User{Sidorov Alexandr Ivanovich, birthday: 2011-01-02, registration date: 2021-07-18T03:00:28, login: JJhuFV, password: xg9spJ(
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

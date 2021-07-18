@@ -1,0 +1,13 @@
+utils/JSONMapperGSON.java
+ utils.JSONMapperGSON
+User.java
+ User
+ User$FullName
+utils/XMLMapperXStream.java
+ utils.XMLMapperXStream
+utils/JSONMapperJackson.java
+ utils.JSONMapperJackson
+utils/XMLMapperJackson.java
+ utils.XMLMapperJackson
+utils/XMLMapperJavaxXml.java
+ utils.XMLMapperJavaxXml
