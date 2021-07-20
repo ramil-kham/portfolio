@@ -99,6 +99,6 @@ public class TestUser {
         reader.close();
         System.out.println(userFromJsonForList);
         System.out.println(listOfUsers);
-        Assertions.assertEquals(user, userFromJsonForList);
+        Assertions.assertEquals(listOfUsers, userFromJsonForList);
     }
 }

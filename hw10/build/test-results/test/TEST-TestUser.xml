@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestUser" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-07-20T17:59:52" hostname="LAPTOP-D0LCGE5F" time="0.065">
+<testsuite name="TestUser" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-07-20T18:04:32" hostname="LAPTOP-D0LCGE5F" time="0.071">
   <properties/>
-  <testcase name="TestWithGson()" classname="TestUser" time="0.065">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;User{Andreev Maxim Petrovich, birthday: 1986-02-06, registration date: 2021-07-20T20:59:52, login: RVgyXe, password: zq5YNY;&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;User{Andreev Maxim Petrovich, birthday: 1986-02-06, registration date: 2021-07-20T20:59:52, login: RVgyXe, password: zq5YNY;&gt; but was: &lt;null&gt;
+  <testcase name="TestWithGsonForList()" classname="TestUser" time="0.071">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;[User{Sidorov Maxim Petrovich, birthday: 1973-05-04, registration date: 2021-07-20T21:04:32, login: oMWLCK, password: 6TFhc1=, User{Petrov Sergey Vladimirovich, birthday: 1995-05-25, registration date: 2021-07-20T21:04:32, login: ZzupbY, password: 8otGwn!, User{Andreev Maxim Petrovich, birthday: 1973-04-15, registration date: 2021-07-20T21:04:32, login: DWpedM, password: nU0UdC']&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;[User{Sidorov Maxim Petrovich, birthday: 1973-05-04, registration date: 2021-07-20T21:04:32, login: oMWLCK, password: 6TFhc1=, User{Petrov Sergey Vladimirovich, birthday: 1995-05-25, registration date: 2021-07-20T21:04:32, login: ZzupbY, password: 8otGwn!, User{Andreev Maxim Petrovich, birthday: 1973-04-15, registration date: 2021-07-20T21:04:32, login: DWpedM, password: nU0UdC']&gt; but was: &lt;null&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1124)
-	at TestUser.TestWithGson(TestUser.java:67)
+	at TestUser.TestWithGsonForList(TestUser.java:102)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -99,8 +99,8 @@
 	at java.base/java.lang.Thread.run(Thread.java:832)
 </failure>
   </testcase>
-  <system-out><![CDATA[{"fullName":"Andreev Maxim Petrovich","birthDay":"1986-02-06","registrationDate":"2021-07-20T20:59:52","login":"RVgyXe","password":"zq5YNY;"}null
-User{Andreev Maxim Petrovich, birthday: 1986-02-06, registration date: 2021-07-20T20:59:52, login: RVgyXe, password: zq5YNY;
+  <system-out><![CDATA[[{"fullName":"Sidorov Maxim Petrovich","birthDay":"1973-05-04","registrationDate":"2021-07-20T21:04:32","login":"oMWLCK","password":"6TFhc1\u003d"},{"fullName":"Petrov Sergey Vladimirovich","birthDay":"1995-05-25","registrationDate":"2021-07-20T21:04:32","login":"ZzupbY","password":"8otGwn!"},{"fullName":"Andreev Maxim Petrovich","birthDay":"1973-04-15","registrationDate":"2021-07-20T21:04:32","login":"DWpedM","password":"nU0UdC\u0027"}]null
+[User{Sidorov Maxim Petrovich, birthday: 1973-05-04, registration date: 2021-07-20T21:04:32, login: oMWLCK, password: 6TFhc1=, User{Petrov Sergey Vladimirovich, birthday: 1995-05-25, registration date: 2021-07-20T21:04:32, login: ZzupbY, password: 8otGwn!, User{Andreev Maxim Petrovich, birthday: 1973-04-15, registration date: 2021-07-20T21:04:32, login: DWpedM, password: nU0UdC']
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
