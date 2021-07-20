@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Objects;
 import java.util.Random;
 
 @XmlRootElement(name="User")
@@ -60,6 +61,19 @@ public class User {
     public String toString() {
         return "User{" + fullName + ", birthday: " + birthDay + ", registration date: " + registrationDate +
                 ", login: " + login + ", password: " + password;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return this.toString().equals(user.toString());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullName, birthDay, registrationDate, login, password);
     }
 
     public static class FullName {
