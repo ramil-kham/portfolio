@@ -29,6 +29,8 @@ public class User {
         this.password = password;
     }
 
+
+
     public User()  {
         this.fullName = generateRandomName();
         this.birthDay = generateRandomDate();

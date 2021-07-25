@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestUser" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-07-20T18:04:32" hostname="LAPTOP-D0LCGE5F" time="0.071">
+<testsuite name="TestUser" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-07-20T19:27:53" hostname="LAPTOP-D0LCGE5F" time="0.096">
   <properties/>
-  <testcase name="TestWithGsonForList()" classname="TestUser" time="0.071">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;[User{Sidorov Maxim Petrovich, birthday: 1973-05-04, registration date: 2021-07-20T21:04:32, login: oMWLCK, password: 6TFhc1=, User{Petrov Sergey Vladimirovich, birthday: 1995-05-25, registration date: 2021-07-20T21:04:32, login: ZzupbY, password: 8otGwn!, User{Andreev Maxim Petrovich, birthday: 1973-04-15, registration date: 2021-07-20T21:04:32, login: DWpedM, password: nU0UdC']&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;[User{Sidorov Maxim Petrovich, birthday: 1973-05-04, registration date: 2021-07-20T21:04:32, login: oMWLCK, password: 6TFhc1=, User{Petrov Sergey Vladimirovich, birthday: 1995-05-25, registration date: 2021-07-20T21:04:32, login: ZzupbY, password: 8otGwn!, User{Andreev Maxim Petrovich, birthday: 1973-04-15, registration date: 2021-07-20T21:04:32, login: DWpedM, password: nU0UdC']&gt; but was: &lt;null&gt;
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1124)
-	at TestUser.TestWithGsonForList(TestUser.java:102)
+  <testcase name="TestWithGsonForList()" classname="TestUser" time="0.096">
+    <failure message="com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was BEGIN_ARRAY at line 1 column 2 path $" type="com.google.gson.JsonSyntaxException">com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was BEGIN_ARRAY at line 1 column 2 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
+	at com.google.gson.Gson.fromJson(Gson.java:932)
+	at com.google.gson.Gson.fromJson(Gson.java:897)
+	at utils.JSONMapperGSON.deserializeJSONForList(JSONMapperGSON.java:33)
+	at TestUser.TestWithGsonForList(TestUser.java:94)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -97,10 +96,12 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was BEGIN_ARRAY at line 1 column 2 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:384)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:215)
+	... 92 more
 </failure>
   </testcase>
-  <system-out><![CDATA[[{"fullName":"Sidorov Maxim Petrovich","birthDay":"1973-05-04","registrationDate":"2021-07-20T21:04:32","login":"oMWLCK","password":"6TFhc1\u003d"},{"fullName":"Petrov Sergey Vladimirovich","birthDay":"1995-05-25","registrationDate":"2021-07-20T21:04:32","login":"ZzupbY","password":"8otGwn!"},{"fullName":"Andreev Maxim Petrovich","birthDay":"1973-04-15","registrationDate":"2021-07-20T21:04:32","login":"DWpedM","password":"nU0UdC\u0027"}]null
-[User{Sidorov Maxim Petrovich, birthday: 1973-05-04, registration date: 2021-07-20T21:04:32, login: oMWLCK, password: 6TFhc1=, User{Petrov Sergey Vladimirovich, birthday: 1995-05-25, registration date: 2021-07-20T21:04:32, login: ZzupbY, password: 8otGwn!, User{Andreev Maxim Petrovich, birthday: 1973-04-15, registration date: 2021-07-20T21:04:32, login: DWpedM, password: nU0UdC']
-]]></system-out>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

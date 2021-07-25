@@ -1,0 +1,12 @@
+Request method:	GET
+4Request URI:	http://petstore.swagger.io/v2/pet/159
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Ë{"id":159,"category":{"id":1,"name":"Dogs"},"name":"Tuzik","photoUrls":["https://dogdiary.ru/wp-content/uploads/2018/07/shhenok-zolotistogo-retrivera.jpg"],"tags":[{"id":6,"name":"6"}],"status":"SOLD"}

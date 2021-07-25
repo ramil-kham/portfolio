@@ -9,7 +9,7 @@ utils/JSONMapperJackson.java
  utils.JSONMapperJackson
 ListOfUsers.java
  ListOfUsers
-utils/JSONMapperGSON.java
- utils.JSONMapperGSON
 utils/XMLMapperXStream.java
  utils.XMLMapperXStream
+utils/JSONMapperGSON.java
+ utils.JSONMapperGSON

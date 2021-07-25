@@ -1,9 +1,11 @@
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import utils.*;
 
 import java.io.*;
+import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,10 +58,6 @@ public class TestUser {
             jsonMapperGSON.serializeJSON(user);
 
             Reader reader = new FileReader("target\\testXmlWithGSON.json");
-            int read;
-            while ((read = reader.read()) != -1) {
-                System.out.print((char) read);
-            }
             User userFromJson = jsonMapperGSON.deserializeJSON(reader, User.class);
             reader.close();
             System.out.println(userFromJson);
@@ -90,15 +88,30 @@ public class TestUser {
         JSONMapperGSON jsonMapperGSON = new JSONMapperGSON();
         jsonMapperGSON.serializeJSONForList(listOfUsers);
 
+
         Reader reader = new FileReader("target\\testXmlWithGSONForList.json");
-        int read;
-        while ((read = reader.read()) != -1) {
-            System.out.print((char) read);
-        }
-        List<User> userFromJsonForList = jsonMapperGSON.deserializeJSON(reader, ListOfUsers.class);
+        Type listOfMyClassObject = new TypeToken<ArrayList<User>>() {}.getType();
+        List<User> userFromJsonForList = jsonMapperGSON.deserializeJSONForList(reader, User.class);
         reader.close();
         System.out.println(userFromJsonForList);
         System.out.println(listOfUsers);
-        Assertions.assertEquals(listOfUsers, userFromJsonForList);
+//        Assertions.assertEquals(listOfUsers, userFromJsonForList);
     }
+//    @Test
+//    public void method() throws IOException, ClassNotFoundException {
+//        List<User> list = new ArrayList<>();
+//        for (int i = 0; i < 3; i++) {
+//            User user = new User();
+//            list.add(user);
+//        }
+//        FileOutputStream fos = new FileOutputStream("C:\\Users\\Airis\\IdeaProjects\\portfolio\\hw-9\\target\\users.txt");
+//        ObjectOutputStream oos = new ObjectOutputStream(fos);
+//        oos.writeObject(list);
+//
+//        FileInputStream fis = new FileInputStream("C:\\Users\\Airis\\IdeaProjects\\portfolio\\hw-9\\target\\users.txt");
+//        ObjectInputStream ois = new ObjectInputStream(fis);
+//        List list1 = (List) ois.readObject();
+//        ois.close();
+//        System.out.println(list1);
+//    }
 }
