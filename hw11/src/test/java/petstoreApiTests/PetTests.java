@@ -18,7 +18,7 @@ public class PetTests {
             new String[] {"https://cdnimg.rg.ru/img/content/177/25/24/iStock-1026229726_d_850.jpg"},
             new Tag[] {new Tag(5, "5")},
             PetStatus.AVAILABLE
-    );;
+    );
 
     @Test
     public void createNewPetTest() {
@@ -86,15 +86,13 @@ public class PetTests {
 
     @Test
     void deletePetTest() {
-        int id = pet.getId();
         RestAssured.given()
-                .header("Content-Type", "application/json")
                 .delete("http://petstore.swagger.io/v2/pet/159");
         Response expectedPet = RestAssured
                 .given()
                 .log().all()
                 .get("http://petstore.swagger.io/v2/pet/159");
         System.out.println(expectedPet.asString());
-//        Assertions.assertEquals(404, expectedPet.getStatusCode());
+        Assertions.assertEquals(404, expectedPet.getStatusCode());
     }
 }

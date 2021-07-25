@@ -97,21 +97,5 @@ public class TestUser {
         System.out.println(listOfUsers);
 //        Assertions.assertEquals(listOfUsers, userFromJsonForList);
     }
-//    @Test
-//    public void method() throws IOException, ClassNotFoundException {
-//        List<User> list = new ArrayList<>();
-//        for (int i = 0; i < 3; i++) {
-//            User user = new User();
-//            list.add(user);
-//        }
-//        FileOutputStream fos = new FileOutputStream("C:\\Users\\Airis\\IdeaProjects\\portfolio\\hw-9\\target\\users.txt");
-//        ObjectOutputStream oos = new ObjectOutputStream(fos);
-//        oos.writeObject(list);
-//
-//        FileInputStream fis = new FileInputStream("C:\\Users\\Airis\\IdeaProjects\\portfolio\\hw-9\\target\\users.txt");
-//        ObjectInputStream ois = new ObjectInputStream(fis);
-//        List list1 = (List) ois.readObject();
-//        ois.close();
-//        System.out.println(list1);
-//    }
+
 }

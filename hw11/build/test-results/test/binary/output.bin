@@ -9,4 +9,4 @@
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-Ë{"id":159,"category":{"id":1,"name":"Dogs"},"name":"Tuzik","photoUrls":["https://dogdiary.ru/wp-content/uploads/2018/07/shhenok-zolotistogo-retrivera.jpg"],"tags":[{"id":6,"name":"6"}],"status":"SOLD"}
+5{"code":1,"type":"error","message":"Pet not found"}
