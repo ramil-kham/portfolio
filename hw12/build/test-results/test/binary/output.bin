@@ -1,0 +1,202 @@
+HTTP/1.1 200 OK
+%Date: Sat, 31 Jul 2021 17:41:19 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 9223372036854775807,
+"    "petId": 3000832771044946503,
+    "quantity": 0,
+0    "shipDate": "2021-07-22T18:21:10.129+0000",
+    "status": "approved",
+    "complete": true
+}
+class Order {
+    id: 9223372036854775807
+    petId: 3000832771044946503
+    quantity: 0
+'    shipDate: 2021-07-22T18:21:10.129Z
+    status: approved
+    complete: true
+}
+class Order {
+    id: 9223372036854775807
+    petId: 3000832771044946503
+    quantity: 0
+'    shipDate: 2021-07-22T18:21:10.129Z
+    status: approved
+    complete: true
+}
+HTTP/1.1 200 OK
+%Date: Sat, 31 Jul 2021 17:41:20 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "sold": 18,
+    "sfsfsfsfs": 1,
+    "123534": 1,
+    "$$^$  ": 1,
+    "string": 191,
+    "pending": 12,
+    "available": 752,
+    "14234": 1,
+    "SUP": 1
+}
+HTTP/1.1 404 Not Found
+%Date: Sat, 31 Jul 2021 17:41:21 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 404,
+    "type": "unknown",
+!    "message": "Order Not Found"
+}
+HTTP/1.1 404 Not Found
+%Date: Sat, 31 Jul 2021 17:41:21 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 404,
+    "type": "unknown",
+!    "message": "Order Not Found"
+}
+HTTP/1.1 200 OK
+%Date: Sat, 31 Jul 2021 17:41:22 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 9223372036854775807,
+"    "petId": 7438837153651211522,
+    "quantity": 0,
+0    "shipDate": "2021-07-22T18:21:10.129+0000",
+    "status": "approved",
+    "complete": true
+}
+HTTP/1.1 200 OK
+%Date: Sat, 31 Jul 2021 17:41:22 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+%    "message": "9223372036854775807"
+}
+9223372036854775807
+9223372036854775807
+HTTP/1.1 404 Not Found
+%Date: Sat, 31 Jul 2021 17:41:23 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 1,
+    "type": "error",
+!    "message": "Order not found"
+}
+HTTP/1.1 404 Not Found
+%Date: Sat, 31 Jul 2021 17:41:23 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 1,
+    "type": "error",
+!    "message": "Order not found"
+}
+HTTP/1.1 200 OK
+%Date: Sat, 31 Jul 2021 17:41:24 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 9223372036854775807,
+"    "petId": 3525919203029480321,
+    "quantity": 0,
+0    "shipDate": "2021-07-22T18:21:10.129+0000",
+    "status": "approved",
+    "complete": true
+}
+HTTP/1.1 200 OK
+%Date: Sat, 31 Jul 2021 17:41:25 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: close
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 9223372036854775807,
+"    "petId": 3525919203029480321,
+    "quantity": 0,
+0    "shipDate": "2021-07-22T18:21:10.129+0000",
+    "status": "approved",
+    "complete": true
+}
+class Order {
+    id: 9223372036854775807
+    petId: 3525919203029480321
+    quantity: 0
+'    shipDate: 2021-07-22T18:21:10.129Z
+    status: approved
+    complete: true
+}
+class Order {
+    id: 9223372036854775807
+    petId: 3525919203029480321
+    quantity: 0
+'    shipDate: 2021-07-22T18:21:10.129Z
+    status: approved
+    complete: true
+}

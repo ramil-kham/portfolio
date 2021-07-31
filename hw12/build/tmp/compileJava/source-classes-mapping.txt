@@ -1,0 +1,66 @@
+petstore/model/Category.java
+ petstore.model.Category
+petstore/model/User.java
+ petstore.model.User
+petstore/model/Tag.java
+ petstore.model.Tag
+petstore/api/UserApi.java
+ petstore.api.UserApi
+ petstore.api.UserApi$CreateUserOper
+ petstore.api.UserApi$CreateUsersWithArrayInputOper
+ petstore.api.UserApi$CreateUsersWithListInputOper
+ petstore.api.UserApi$DeleteUserOper
+ petstore.api.UserApi$GetUserByNameOper
+ petstore.api.UserApi$GetUserByNameOper$1
+ petstore.api.UserApi$LoginUserOper
+ petstore.api.UserApi$LoginUserOper$1
+ petstore.api.UserApi$LogoutUserOper
+ petstore.api.UserApi$UpdateUserOper
+petstore/ResponseSpecBuilders.java
+ petstore.ResponseSpecBuilders
+petstore/model/ModelApiResponse.java
+ petstore.model.ModelApiResponse
+petstore/JSON.java
+ petstore.JSON
+ petstore.JSON$1
+ petstore.JSON$ByteArrayAdapter
+ petstore.JSON$DateTypeAdapter
+ petstore.JSON$LocalDateTypeAdapter
+ petstore.JSON$OffsetDateTimeTypeAdapter
+ petstore.JSON$SqlDateTypeAdapter
+petstore/api/PetApi.java
+ petstore.api.PetApi
+ petstore.api.PetApi$AddPetOper
+ petstore.api.PetApi$DeletePetOper
+ petstore.api.PetApi$FindPetsByStatusOper
+ petstore.api.PetApi$FindPetsByStatusOper$1
+ petstore.api.PetApi$FindPetsByTagsOper
+ petstore.api.PetApi$FindPetsByTagsOper$1
+ petstore.api.PetApi$GetPetByIdOper
+ petstore.api.PetApi$GetPetByIdOper$1
+ petstore.api.PetApi$UpdatePetOper
+ petstore.api.PetApi$UpdatePetWithFormOper
+ petstore.api.PetApi$UploadFileOper
+ petstore.api.PetApi$UploadFileOper$1
+petstore/model/Pet.java
+ petstore.model.Pet
+ petstore.model.Pet$StatusEnum
+ petstore.model.Pet$StatusEnum$Adapter
+petstore/GsonObjectMapper.java
+ petstore.GsonObjectMapper
+petstore/api/StoreApi.java
+ petstore.api.StoreApi
+ petstore.api.StoreApi$DeleteOrderOper
+ petstore.api.StoreApi$GetInventoryOper
+ petstore.api.StoreApi$GetInventoryOper$1
+ petstore.api.StoreApi$GetOrderByIdOper
+ petstore.api.StoreApi$GetOrderByIdOper$1
+ petstore.api.StoreApi$PlaceOrderOper
+ petstore.api.StoreApi$PlaceOrderOper$1
+petstore/model/Order.java
+ petstore.model.Order
+ petstore.model.Order$StatusEnum
+ petstore.model.Order$StatusEnum$Adapter
+petstore/ApiClient.java
+ petstore.ApiClient
+ petstore.ApiClient$Config

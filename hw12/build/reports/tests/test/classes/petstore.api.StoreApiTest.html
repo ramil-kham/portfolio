@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - StoreApiTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>StoreApiTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/petstore.api.html">petstore.api</a> &gt; StoreApiTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">8.211s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">shouldSee200AfterDeleteOrder</td>
+<td class="success">1.549s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldSee200AfterGetInventory</td>
+<td class="success">1.248s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldSee200AfterGetOrderById</td>
+<td class="success">1.546s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldSee200AfterPlaceOrder</td>
+<td class="success">2.282s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldSee404AfterDeleteOrder</td>
+<td class="success">0.814s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldSee404AfterGetOrderById</td>
+<td class="success">0.772s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>HTTP/1.1 200 OK
+Date: Sat, 31 Jul 2021 17:41:19 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;id&quot;: 9223372036854775807,
+    &quot;petId&quot;: 3000832771044946503,
+    &quot;quantity&quot;: 0,
+    &quot;shipDate&quot;: &quot;2021-07-22T18:21:10.129+0000&quot;,
+    &quot;status&quot;: &quot;approved&quot;,
+    &quot;complete&quot;: true
+}
+class Order {
+    id: 9223372036854775807
+    petId: 3000832771044946503
+    quantity: 0
+    shipDate: 2021-07-22T18:21:10.129Z
+    status: approved
+    complete: true
+}
+class Order {
+    id: 9223372036854775807
+    petId: 3000832771044946503
+    quantity: 0
+    shipDate: 2021-07-22T18:21:10.129Z
+    status: approved
+    complete: true
+}
+HTTP/1.1 200 OK
+Date: Sat, 31 Jul 2021 17:41:20 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;sold&quot;: 18,
+    &quot;sfsfsfsfs&quot;: 1,
+    &quot;123534&quot;: 1,
+    &quot;$$^$  &quot;: 1,
+    &quot;string&quot;: 191,
+    &quot;pending&quot;: 12,
+    &quot;available&quot;: 752,
+    &quot;14234&quot;: 1,
+    &quot;SUP&quot;: 1
+}
+HTTP/1.1 404 Not Found
+Date: Sat, 31 Jul 2021 17:41:21 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;code&quot;: 404,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;Order Not Found&quot;
+}
+HTTP/1.1 404 Not Found
+Date: Sat, 31 Jul 2021 17:41:21 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;code&quot;: 404,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;Order Not Found&quot;
+}
+HTTP/1.1 200 OK
+Date: Sat, 31 Jul 2021 17:41:22 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;id&quot;: 9223372036854775807,
+    &quot;petId&quot;: 7438837153651211522,
+    &quot;quantity&quot;: 0,
+    &quot;shipDate&quot;: &quot;2021-07-22T18:21:10.129+0000&quot;,
+    &quot;status&quot;: &quot;approved&quot;,
+    &quot;complete&quot;: true
+}
+HTTP/1.1 200 OK
+Date: Sat, 31 Jul 2021 17:41:22 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;code&quot;: 200,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;9223372036854775807&quot;
+}
+9223372036854775807
+9223372036854775807
+HTTP/1.1 404 Not Found
+Date: Sat, 31 Jul 2021 17:41:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;code&quot;: 1,
+    &quot;type&quot;: &quot;error&quot;,
+    &quot;message&quot;: &quot;Order not found&quot;
+}
+HTTP/1.1 404 Not Found
+Date: Sat, 31 Jul 2021 17:41:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;code&quot;: 1,
+    &quot;type&quot;: &quot;error&quot;,
+    &quot;message&quot;: &quot;Order not found&quot;
+}
+HTTP/1.1 200 OK
+Date: Sat, 31 Jul 2021 17:41:24 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;id&quot;: 9223372036854775807,
+    &quot;petId&quot;: 3525919203029480321,
+    &quot;quantity&quot;: 0,
+    &quot;shipDate&quot;: &quot;2021-07-22T18:21:10.129+0000&quot;,
+    &quot;status&quot;: &quot;approved&quot;,
+    &quot;complete&quot;: true
+}
+HTTP/1.1 200 OK
+Date: Sat, 31 Jul 2021 17:41:25 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;id&quot;: 9223372036854775807,
+    &quot;petId&quot;: 3525919203029480321,
+    &quot;quantity&quot;: 0,
+    &quot;shipDate&quot;: &quot;2021-07-22T18:21:10.129+0000&quot;,
+    &quot;status&quot;: &quot;approved&quot;,
+    &quot;complete&quot;: true
+}
+class Order {
+    id: 9223372036854775807
+    petId: 3525919203029480321
+    quantity: 0
+    shipDate: 2021-07-22T18:21:10.129Z
+    status: approved
+    complete: true
+}
+class Order {
+    id: 9223372036854775807
+    petId: 3525919203029480321
+    quantity: 0
+    shipDate: 2021-07-22T18:21:10.129Z
+    status: approved
+    complete: true
+}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.7</a> at 31 июл. 2021 г., 20:41:25</p>
+</div>
+</div>
+</body>
+</html>

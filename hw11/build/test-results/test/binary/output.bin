@@ -9,4 +9,4 @@
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-5{"code":1,"type":"error","message":"Pet not found"}
+Ä{"id":159,"category":{"id":1,"name":"Dogs"},"name":"Rex","photoUrls":["https://cdnimg.rg.ru/img/content/177/25/24/iStock-1026229726_d_850.jpg"],"tags":[{"id":5,"name":"5"}],"status":"AVAILABLE"}

@@ -1,0 +1,6 @@
+petstore/api/PetApiTest.java
+ petstore.api.PetApiTest
+petstore/api/UserApiTest.java
+ petstore.api.UserApiTest
+petstore/api/StoreApiTest.java
+ petstore.api.StoreApiTest

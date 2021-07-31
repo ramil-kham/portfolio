@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstoreApiTests.PetTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-25T11:17:05" hostname="LAPTOP-D0LCGE5F" time="2.763">
+<testsuite name="petstoreApiTests.PetTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-31T14:08:16" hostname="LAPTOP-D0LCGE5F" time="3.338">
   <properties/>
-  <testcase name="deletePetTest()" classname="petstoreApiTests.PetTests" time="2.763"/>
+  <testcase name="getById()" classname="petstoreApiTests.PetTests" time="3.338"/>
   <system-out><![CDATA[Request method:	GET
 Request URI:	http://petstore.swagger.io/v2/pet/159
 Proxy:			<none>
@@ -13,7 +13,7 @@ Headers:		Accept=*/*
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-{"code":1,"type":"error","message":"Pet not found"}
+{"id":159,"category":{"id":1,"name":"Dogs"},"name":"Rex","photoUrls":["https://cdnimg.rg.ru/img/content/177/25/24/iStock-1026229726_d_850.jpg"],"tags":[{"id":5,"name":"5"}],"status":"AVAILABLE"}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "required": ["sold", "pending", "available"],
+  "minProperties": 3,
+  "properties": {
+    "available": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 1000
+    }
+  }
+}

@@ -1,0 +1,8 @@
+petstore/PetTests.java
+ petstore.PetTests
+petstore/StoreTests.java
+ petstore.StoreTests
+jsonValidateTests/JsonValidateTests.java
+ jsonValidateTests.JsonValidateTests
+petstore/UserTests.java
+ petstore.UserTests

@@ -4,17 +4,6 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../hw8" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-7.1.1" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/../hw8" />
-            <option value="$PROJECT_DIR$/../hw8/untitled" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
         <option name="delegatedBuild" value="true" />
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
@@ -66,34 +55,22 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="true" />
-        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/hw5/hw6" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/hw5/hw6" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="delegatedBuild" value="true" />
-        <option name="testRunner" value="GRADLE" />
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/hw6" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/hw6" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/untitled2" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/hw12" />
         <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-7.1.1" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/untitled2" />
+            <option value="$PROJECT_DIR$/hw12" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/hw13" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-7.1.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/hw13" />
           </set>
         </option>
       </GradleProjectSettings>

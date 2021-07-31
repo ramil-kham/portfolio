@@ -1,6 +1,5 @@
-User.java
- User
- User$FullName
+utils/JSONMapperGSON.java
+ utils.JSONMapperGSON
 utils/XMLMapperJackson.java
  utils.XMLMapperJackson
 utils/XMLMapperJavaxXml.java
@@ -11,5 +10,6 @@ ListOfUsers.java
  ListOfUsers
 utils/XMLMapperXStream.java
  utils.XMLMapperXStream
-utils/JSONMapperGSON.java
- utils.JSONMapperGSON
+User.java
+ User
+ User$FullName

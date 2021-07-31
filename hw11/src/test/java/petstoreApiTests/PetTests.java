@@ -28,6 +28,7 @@ public class PetTests {
                 .body(pet)
                 .contentType(ContentType.JSON)
                 .post("https://petstore.swagger.io/v2/pet/");
+        System.out.println(response.statusCode());
         System.out.println(response.asString());
         Assertions.assertEquals(200, response.statusCode());
         Assertions.assertFalse(response.getBody().asString().isEmpty());
@@ -38,7 +39,7 @@ public class PetTests {
         Response response = RestAssured
                 .given()
                 .log().all()
-                .header("Accept", "application/json")
+//                .header("Accept", "application/json")
                 .get("http://petstore.swagger.io/v2/pet/159");
         System.out.println(response.asString());
         Assertions.assertEquals(200, response.statusCode());

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="petstore.UserTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-31T16:12:53" hostname="LAPTOP-D0LCGE5F" time="2.156">
+  <properties/>
+  <testcase name="validateUserGet()" classname="petstore.UserTests" time="2.156"/>
+  <system-out><![CDATA[200
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
