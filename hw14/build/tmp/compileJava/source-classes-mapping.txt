@@ -1,0 +1,5 @@
+httpBean/HttpBeanPojo.java
+ httpBean.HttpBeanPojo
+ httpBean.HttpBeanPojo$Headers
+client/ApacheHttpClient.java
+ client.ApacheHttpClient

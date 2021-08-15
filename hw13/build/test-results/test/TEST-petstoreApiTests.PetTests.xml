@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="petstoreApiTests.PetTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-15T01:48:21" hostname="LAPTOP-D0LCGE5F" time="2.437">
+  <properties/>
+  <testcase name="validatePetGet()" classname="petstoreApiTests.PetTests" time="2.437"/>
+  <system-out><![CDATA[{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

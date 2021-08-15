@@ -1,19 +1,31 @@
 {
-  "title": "Validate json document",
-  "description": "Validate json document",
+  "title": "Pet JSON schema",
+  "description": "Validate json",
   "type": "object",
-  "required": ["headers", "json"],
-  "minProperties": 2,
-  "json":{
-    "type": "object",
-    "required": ["id", "name"],
-    "properties": {
-      "id": {
-        "type": "integer"
+  "required": ["id", "category", "name", "photoUrls", "tags", "status"],
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "category": {
+      "type": "object",
+      "required": ["id", "name"]
+    },
+    "name": {
+      "type": "string"
+    },
+    "photoUrls": {
+      "type": "array",
+      "items": {
+        "type": "string"
       }
     },
-      "category": {
+    "tags": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
         "type": "object",
+        "required": ["id", "name"],
         "properties": {
           "id": {
             "type": "integer"
@@ -22,40 +34,10 @@
             "type": "string"
           }
         }
-      },
-      "name": {
-        "type": "string"
-      },
-      "photoUrls": {
-        "type": "array",
-        "items": [
-          {
-            "type": "string"
-          }
-        ]
-      },
-      "tags": {
-        "type": "array",
-        "items": [
-          {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "integer"
-              },
-              "name": {
-                "type": "string"
-              }
-            }
-          }
-        ]
-      },
-            "status": {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string"
-              }
-            }
+      }
+    },
+    "status": {
+      "type": "string"
+    }
   }
 }

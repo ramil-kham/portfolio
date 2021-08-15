@@ -1,0 +1,59 @@
+{
+  "uid" : "a0cccc5b6efa8233",
+  "name" : "createNewPetTest()",
+  "fullName" : "petstoreApiTests.PetTests.createNewPetTest",
+  "historyId" : "8f616f2be6053eba937c48be8cf8f639",
+  "time" : {
+    "start" : 1628985751421,
+    "stop" : 1628985752329,
+    "duration" : 908
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Petstore"
+  }, {
+    "name" : "feature",
+    "value" : "User Tests"
+  }, {
+    "name" : "story",
+    "value" : "Petstore user tests"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-D0LCGE5F"
+  }, {
+    "name" : "thread",
+    "value" : "10308@LAPTOP-D0LCGE5F.Test worker(15)"
+  }, {
+    "name" : "package",
+    "value" : "petstoreApiTests.PetTests"
+  }, {
+    "name" : "testClass",
+    "value" : "petstoreApiTests.PetTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "createNewPetTest"
+  }, {
+    "name" : "suite",
+    "value" : "petstoreApiTests.PetTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a0cccc5b6efa8233.json",
+  "parameterValues" : [ ]
+}

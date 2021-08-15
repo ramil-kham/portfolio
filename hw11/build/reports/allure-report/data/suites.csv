@@ -1,0 +1,6 @@
+"Status","Name","Duration in ms","Description"
+"passed","petstoreApiTests.PetTests.updateByIdTest1","1337",""
+"passed","petstoreApiTests.PetTests.updateByIdTest","848",""
+"passed","petstoreApiTests.PetTests.getById","1135",""
+"failed","petstoreApiTests.PetTests.deletePetTest","4154",""
+"passed","petstoreApiTests.PetTests.createNewPetTest","908",""

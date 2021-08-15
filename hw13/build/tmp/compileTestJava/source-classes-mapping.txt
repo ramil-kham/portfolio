@@ -1,8 +1,10 @@
-petstore/PetTests.java
- petstore.PetTests
-petstore/StoreTests.java
- petstore.StoreTests
+petstoreApiTests/UserTests.java
+ petstoreApiTests.UserTests
 jsonValidateTests/JsonValidateTests.java
  jsonValidateTests.JsonValidateTests
-petstore/UserTests.java
- petstore.UserTests
+petstoreApiTests/TestHelper.java
+ petstoreApiTests.TestHelper
+petstoreApiTests/StoreTests.java
+ petstoreApiTests.StoreTests
+petstoreApiTests/PetTests.java
+ petstoreApiTests.PetTests

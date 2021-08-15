@@ -1,0 +1,1 @@
+ïHttpBeanPojo{headers=Headers{accept='application/json', cacheControl='null', host='httpbin.org', userAgent='null', xAmznTraceId='Root=1-61186028-33237b5d0bc43b477c0fe350'}, origin='178.204.164.130', url='http://httpbin.org/get', args={}}

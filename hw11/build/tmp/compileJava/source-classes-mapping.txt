@@ -1,12 +1,12 @@
-petstore/Category.java
- petstore.Category
-petstore/PetStatus.java
- petstore.PetStatus
 petstore/NewPet.java
  petstore.NewPet
  petstore.NewPet$Category
  petstore.NewPet$Tag
-petstore/Tag.java
- petstore.Tag
+petstore/Category.java
+ petstore.Category
+petstore/PetStatus.java
+ petstore.PetStatus
 petstore/Pet.java
  petstore.Pet
+petstore/Tag.java
+ petstore.Tag

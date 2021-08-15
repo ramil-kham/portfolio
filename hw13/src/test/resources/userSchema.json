@@ -1,34 +1,30 @@
 {
+  "title": "User JSON Schema",
   "type": "object",
-  "minProperties": 2,
-  "json":{
-    "type": "object",
-    "required": ["id", "username", "email", "phone"],
-    "properties": {
-      "id": {
-        "type": "integer"
-      },
-      "username": {
-        "type": "integer"
-      },
-      "firstname": {
-        "type": "string"
-      },
-      "lastname": {
-        "type": "string"
-      },
-      "email": {
-        "type": "string"
-      },
-      "password": {
-        "type": "string"
-      },
-      "phone": {
-        "type": "string"
-      },
-      "userStatus": {
-        "type": "integer"
-      }
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "username": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "userStatus": {
+      "type": "integer"
     }
   }
 }

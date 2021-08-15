@@ -1,15 +1,18 @@
 package petstoreApiTests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import petstore.Category;
-import petstore.Pet;
-import petstore.PetStatus;
-import petstore.Tag;
 
+@Epic("Petstore")
+@Story("Petstore pet tests")
+@Feature("Pet tests")
 public class PetTests {
 
     Pet pet = new Pet(159,
@@ -21,6 +24,7 @@ public class PetTests {
     );
 
     @Test
+    @Order(1)
     public void createNewPetTest() {
         Response response = RestAssured
                 .given()
@@ -35,11 +39,11 @@ public class PetTests {
     }
 
     @Test
+    @Order(2)
     void getById() {
         Response response = RestAssured
                 .given()
                 .log().all()
-//                .header("Accept", "application/json")
                 .get("http://petstore.swagger.io/v2/pet/159");
         System.out.println(response.asString());
         Assertions.assertEquals(200, response.statusCode());
@@ -47,6 +51,7 @@ public class PetTests {
     }
 
     @Test
+    @Order(3)
     void updateByIdTest() {
         Pet expectedPet = new Pet(
                 159,
@@ -68,24 +73,22 @@ public class PetTests {
         Assertions.assertFalse(response.getBody().asString().isEmpty());
     }
     @Test
+    @Order(4)
     void updateByIdTest1() {
         pet.setId(159);
         pet.setName("Sharik");
         pet.setStatus(PetStatus.SOLD);
-
         Response response = RestAssured
                 .given()
                 .log().all()
                 .body(pet)
                 .contentType(ContentType.JSON)
                 .put("https://petstore.swagger.io/v2/pet/159");
-
         System.out.println(response.asString());
-//        Assertions.assertEquals(200, response.statusCode());
-//        Assertions.assertFalse(response.getBody().asString().isEmpty());
     }
 
     @Test
+    @Order(5)
     void deletePetTest() {
         RestAssured.given()
                 .delete("http://petstore.swagger.io/v2/pet/159");

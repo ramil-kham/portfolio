@@ -28,8 +28,8 @@ public class JsonValidateTests {
         jsonObject.add("toppings", toppings);
         Response response = RestAssured.given().log().all().body(jsonObject.toString()).post("http://httpbin.org/post");
         response.then().body(matchesJsonSchemaInClasspath("httpBeanJsonSchema.json").using(runJsonSchemaFactory()));
-//        System.out.println(response.asString());
-//        System.out.println(response.statusCode());
+        System.out.println(response.asString());
+        System.out.println(response.statusCode());
 
     }
 
