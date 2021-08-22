@@ -1,5 +1,6 @@
 package petstoreApiTests;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -11,13 +12,6 @@ import static petstoreApiTests.TestHelper.runJsonSchemaFactory;
 
 
 public class PetTests {
-
-//    @Test
-//    void validatePetPost() {
-//        Response response = RestAssured.post("https://petstore.swagger.io/v2/pet/2");
-//        System.out.println(response.statusCode());
-//        response.then().body(matchesJsonSchemaInClasspath("petSchema.json").using(runJsonSchemaFactory()));
-//    }
 
     @Test
     void petPost() {

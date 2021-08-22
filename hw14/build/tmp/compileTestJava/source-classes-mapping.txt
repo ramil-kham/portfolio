@@ -1,6 +1,4 @@
-petstoreApiTests/TestHelper.java
- petstoreApiTests.TestHelper
-petstoreApiTests/ApacheHttpTests.java
- petstoreApiTests.ApacheHttpTests
-petstoreApiTests/Apache.java
- petstoreApiTests.Apache
+apacheTests/ApacheHttpUserTests.java
+ apacheTests.ApacheHttpUserTests
+apacheTests/ApacheHttpStoreTests.java
+ apacheTests.ApacheHttpStoreTests

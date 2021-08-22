@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstoreApiTests.Apache" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-15T00:30:32" hostname="LAPTOP-D0LCGE5F" time="2.477">
-  <properties/>
-  <testcase name="check200StatusCodeAndHeadersHttpBeanGetRequest()" classname="petstoreApiTests.Apache" time="2.477"/>
-  <system-out><![CDATA[HttpBeanPojo{headers=Headers{accept='application/json', cacheControl='null', host='httpbin.org', userAgent='null', xAmznTraceId='Root=1-61186028-33237b5d0bc43b477c0fe350'}, origin='178.204.164.130', url='http://httpbin.org/get', args={}}
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
