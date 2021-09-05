@@ -4,6 +4,16 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../hw20" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-7.1.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../hw20" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="delegatedBuild" value="true" />
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
@@ -96,6 +106,26 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/hw14" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/hw19" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-7.1.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/hw19" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/hw20" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-7.1.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/hw20" />
           </set>
         </option>
       </GradleProjectSettings>

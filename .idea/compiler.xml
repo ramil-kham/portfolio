@@ -8,6 +8,8 @@
       <module name="hw-10" target="15" />
       <module name="hw-10.main" target="15" />
       <module name="hw-10.test" target="15" />
+      <module name="hw20.main" target="15" />
+      <module name="hw20.test" target="15" />
       <module name="hw6" target="15" />
       <module name="hw6.main" target="15" />
       <module name="hw6.test" target="15" />
@@ -17,6 +19,8 @@
       <module name="hw8.untitled" target="15" />
       <module name="hw8.untitled.main" target="15" />
       <module name="hw8.untitled.test" target="15" />
+      <module name="org.example.hw20.main" target="15" />
+      <module name="org.example.hw20.test" target="15" />
       <module name="org.example.hw6.main" target="15" />
       <module name="org.example.hw6.test" target="15" />
     </bytecodeTargetLevel>
