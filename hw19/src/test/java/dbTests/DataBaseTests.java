@@ -1,7 +1,7 @@
 package dbTests;
 
-import DBO.User;
-import client.UserDBClient;
+import DBO.TestUser;
+import client.CustomerDBClient;
 import com.google.gson.JsonObject;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -16,93 +16,101 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 public class DataBaseTests {
-
-    private static UserDBClient dbClient;
+    private static CustomerDBClient dbClient;
 
     @BeforeAll
-    public static void createUsers() {
-        dbClient = new UserDBClient();
-        dbClient.saveUser(new User("Ivan", "22.07.1980", "Ufa", "+79638527410"));
-        dbClient.saveUser(new User("Andrey", "01.04.2001", "Moscow", "+79518472360"));
+    public static void createCustomers() {
+        dbClient = new CustomerDBClient();
+        dbClient.saveCustomer(new TestUser("email888", "name444", "s", "sr"));
+        dbClient.saveCustomer(new TestUser("email4444", "name3334", "scz", "vxcx"));
     }
 
     @AfterAll
     public static void clearDB() {
-       // dbClient.deleteAllUsers();
+       // dbClient.deleteAllCustomers();
     }
 
     @Test
-    void getUsersTest() {
-        List<User> actualUsers = dbClient.findAllUsers();
-        User[] expectedUsers = RestAssured.get("http://localhost:3000/users/").as(User[].class);
-        Assertions.assertEquals(expectedUsers[0], actualUsers.get(0));
-        Assertions.assertEquals(expectedUsers.length, actualUsers.size());
+    void getCustomersTest() {
+        List<TestUser> actualCustomers = dbClient.findAllCustomers();
+        TestUser[] expectedCustomers = RestAssured.get("http://localhost:3000/customers/").as(TestUser[].class);
+        Assertions.assertEquals(expectedCustomers[0], actualCustomers.get(0));
+        Assertions.assertEquals(expectedCustomers.length, actualCustomers.size());
     }
 
     @Test
-    void getUserByIdTest() {
-        List<User> allUsers = dbClient.findAllUsers();
-        int id = allUsers.get(RandomUtils.nextInt(0, allUsers.size() - 1)).getId();
-        User actualUser = dbClient.findUserById(id);
-        User expectedUser = RestAssured.get("http://localhost:3000/users/" + id).as(User.class);
-        Assertions.assertEquals(expectedUser, actualUser);
+    void getCustomerByIdTest() {
+        List<TestUser> allCustomers = dbClient.findAllCustomers();
+        int id = allCustomers.get(RandomUtils.nextInt(0, allCustomers.size() - 1)).getId();
+        TestUser actualCustomer = dbClient.findCustomerById(id);
+        TestUser expectedCustomer = RestAssured.get("http://localhost:3000/customers/" + id).as(TestUser.class);
+        Assertions.assertEquals(expectedCustomer, actualCustomer);
     }
 
     @Test
-    void createUserTest() {
-        User expectedUser = RestAssured.given().contentType(ContentType.JSON).body(generateUserBody()).post("http://localhost:3000/users/").as(User.class);
-        User actualUser = dbClient.findUserById(expectedUser.getId());
-        Assertions.assertEquals(expectedUser, actualUser);
+    void createCustomerTest() {
+        TestUser expectedCustomer = RestAssured.given().contentType(ContentType.JSON).body(generateCustomerBody()).post("http://localhost:3000/customers/").as(TestUser.class);
+        TestUser actualCustomer = dbClient.findCustomerById(expectedCustomer.getId());
+        Assertions.assertEquals(expectedCustomer, actualCustomer);
     }
 
     @Test
-    void editUserTest() {
-        List<User> allUsers = dbClient.findAllUsers();
-        int id = allUsers.get(RandomUtils.nextInt(0, allUsers.size() - 1)).getId();
-        User userBeforeRequest = dbClient.findUserById(id);
-        User expectedUser = RestAssured.given().contentType(ContentType.JSON).body(generateUserBody()).put("http://localhost:3000/users/" + id).as(User.class);
-        User UserAfterRequest = dbClient.findUserById(id);
-        Assertions.assertEquals(expectedUser.getId(), userBeforeRequest.getId());
-        Assertions.assertEquals(expectedUser, UserAfterRequest);
+    void editCustomerTest() {
+        List<TestUser> allCustomers = dbClient.findAllCustomers();
+        int id = allCustomers.get(RandomUtils.nextInt(0, allCustomers.size() - 1)).getId();
+        TestUser customerBeforeRequest = dbClient.findCustomerById(id);
+        TestUser expectedCustomer = RestAssured.given().contentType(ContentType.JSON).body(generateCustomerBody()).put("http://localhost:3000/customers/" + id).as(TestUser.class);
+        TestUser customerAfterRequest = dbClient.findCustomerById(id);
+        Assertions.assertEquals(expectedCustomer.getId(), customerBeforeRequest.getId());
+        Assertions.assertEquals(expectedCustomer, customerAfterRequest);
     }
 
     @Test
-    void deleteUserTest() {
-        List<User> allUsers = dbClient.findAllUsers();
-        int id = allUsers.get(RandomUtils.nextInt(0, allUsers.size() - 1)).getId();
-        Response expectedUser = RestAssured.delete("http://localhost:3000/users/" + id);
-        User UserAfterRequest = dbClient.findUserById(id);
-        Assertions.assertEquals("User was deleted successfully!", expectedUser.getBody().jsonPath().getString("message"));
-        Assertions.assertNull(UserAfterRequest);
+    void deleteCustomerTest() {
+        List<TestUser> allCustomers = dbClient.findAllCustomers();
+        int id = allCustomers.get(RandomUtils.nextInt(0, allCustomers.size() - 1)).getId();
+        Response expectedCustomer = RestAssured.delete("http://localhost:3000/customers/" + id);
+        TestUser customerAfterRequest = dbClient.findCustomerById(id);
+        Assertions.assertEquals("Customer was deleted successfully!", expectedCustomer.getBody().jsonPath().getString("message"));
+        Assertions.assertNull(customerAfterRequest);
     }
 
     @Test
     void checkUpdateHibernateMethod() {
-        User testUserBefore = new User("testName", "testDate", "testCity", "testPhone");
-        dbClient.saveUser(testUserBefore);
-        List<User> allUsers = dbClient.findAllUsers();
-        User savedUser = allUsers.get(allUsers.size() - 1);
-        User testUserAfter = new User( savedUser.getId(), "testName2", "testDate2", "testCity2", "testPhone2");
-        dbClient.updateUser(testUserAfter);
-        Assertions.assertEquals(testUserAfter, dbClient.findUserById(savedUser.getId()));
+        TestUser testCustomerBefore = new TestUser("testEmail", "testName", "3e", "34");
+        dbClient.saveCustomer(testCustomerBefore);
+        List<TestUser> allCustomers = dbClient.findAllCustomers();
+        TestUser savedCustomer = allCustomers.get(allCustomers.size() - 1);
+        TestUser testCustomerAfter = new TestUser( savedCustomer.getId(), "testEmail2", "testName2", "434", "34");
+        dbClient.updateCustomer(testCustomerAfter);
+        Assertions.assertEquals(testCustomerAfter, dbClient.findCustomerById(savedCustomer.getId()));
+    }
+
+    @Test
+    void checkUpdateHibernateMethodWithIndex() {
+        TestUser testCustomerBefore = new TestUser("testEmail", "testName", "rff", "dscs");
+        dbClient.saveCustomer(testCustomerBefore);
+        TestUser testCustomerAfter = new TestUser(dbClient.findIndexCustomer(), "testEmail2", "testName2", "ewf", "wef");
+        dbClient.updateCustomer(testCustomerAfter);
+        Assertions.assertEquals(testCustomerAfter, dbClient.findCustomerById(dbClient.findIndexCustomer()));
     }
 
     @Test
     void checkDeleteHibernateMethod() {
-        User testUserBefore = new User("testName3", "testDate3", "testCity3","testPhone3");
-        dbClient.saveUser(testUserBefore);
-        List<User> allUsers = dbClient.findAllUsers();
-        User savedUser = allUsers.get(allUsers.size() - 1);
-        dbClient.deleteUser(savedUser);
-        Assertions.assertNull(dbClient.findUserById(savedUser.getId()));
+        TestUser testCustomerBefore = new TestUser("testEmail", "testName", "458", "wefs");
+        dbClient.saveCustomer(testCustomerBefore);
+        List<TestUser> allCustomers = dbClient.findAllCustomers();
+        TestUser savedCustomer = allCustomers.get(allCustomers.size() - 1);
+        dbClient.deleteCustomer(savedCustomer);
+        Assertions.assertNull(dbClient.findCustomerById(savedCustomer.getId()));
     }
 
-    private String generateUserBody() {
+    private String generateCustomerBody() {
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("name", RandomStringUtils.randomAlphabetic(5));
-        jsonObject.addProperty("date", RandomStringUtils.randomAlphanumeric(6));
-        jsonObject.addProperty("city", RandomStringUtils.randomAlphabetic(6));
-        jsonObject.addProperty("phone", RandomStringUtils.randomAlphanumeric(6));
+        jsonObject.addProperty("name", RandomStringUtils.randomAlphanumeric(4) + "@test.tt");
+        jsonObject.addProperty("date", RandomStringUtils.randomAlphabetic(5));
+        jsonObject.addProperty("city", RandomStringUtils.randomAlphabetic(5));
+        jsonObject.addProperty("phone", RandomStringUtils.randomAlphabetic(5));
         return jsonObject.toString();
     }
 }

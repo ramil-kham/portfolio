@@ -1,8 +1,14 @@
-client/UserDBClient.java
- client.UserDBClient
 DBO/User.java
  DBO.User
+client/UserDBClient.java
+ client.UserDBClient
 DAO/AbstractDAO.java
  DAO.AbstractDAO
 DAO/UserDAO.java
  DAO.UserDAO
+DAO/CustomerDAO.java
+ DAO.CustomerDAO
+DBO/Customer.java
+ DBO.Customer
+client/CustomerDBClient.java
+ client.CustomerDBClient

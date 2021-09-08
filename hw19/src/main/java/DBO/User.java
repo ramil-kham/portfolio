@@ -10,13 +10,17 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    @Column(name = "id")
-    private Integer id;
+    private int id;
+//    @Column(name = "name")
     private String name;
+//    @Column(name = "date")
     private String date;
+//    @Column(name = "city")
     private String city;
+//    @Column(name = "phone")
     private String phone;
 
-    public User(Integer id, String name, String date, String city, String phone) {
+    public User(int id, String name, String date, String city, String phone) {
         this.id = id;
         this.name = name;
         this.date = date;
@@ -34,11 +38,11 @@ public class User implements Serializable {
     public User() {
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -1,2 +1,4 @@
+dbTests/UserDataBaseTests.java
+ dbTests.UserDataBaseTests
 dbTests/DataBaseTests.java
  dbTests.DataBaseTests

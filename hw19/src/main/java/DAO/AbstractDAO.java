@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 import java.io.Serializable;
 import java.util.List;
 
-public abstract class AbstractDAO <T extends Serializable> {
+public abstract class AbstractDAO<T extends Serializable> {
     private Session session;
     private Class<T> clazz;
 
@@ -43,6 +43,14 @@ public abstract class AbstractDAO <T extends Serializable> {
         return list;
     }
 
+    public int findIndex() {
+        session = openSession();
+        int index = Integer.parseInt(session.createQuery("select max(id) from " + clazz.getName()).getSingleResult().toString());
+        session.close();
+        System.out.println(index);
+        return index;
+    }
+
     public void delete(T t) {
         session = openSession();
         session.beginTransaction();
@@ -69,5 +77,4 @@ public abstract class AbstractDAO <T extends Serializable> {
     private Session openSession() {
         return getSessionFactory(clazz).openSession();
     }
-
 }
